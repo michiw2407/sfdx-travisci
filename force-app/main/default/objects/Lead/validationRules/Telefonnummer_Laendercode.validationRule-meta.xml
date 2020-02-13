@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Telefonnummer_Laendercode</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+NOT(
+REGEX(Phone, &quot;^\\+{0,1}[1-9]\\d{1,14}$&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Bitte prüfen Sie die Formatierung der Telefonnummer.</errorMessage>
+</ValidationRule>

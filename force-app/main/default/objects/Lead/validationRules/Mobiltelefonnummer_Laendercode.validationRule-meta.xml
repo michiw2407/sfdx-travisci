@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobiltelefonnummer_Laendercode</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+NOT(
+OR(
+ISBLANK(MobilePhone),
+REGEX(MobilePhone, &quot;^\\+{0,1}[1-9]\\d{1,14}$&quot;)
+))</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>Bitte prüfen Sie die Formatierung der Mobiltelefonnummer.</errorMessage>
+</ValidationRule>

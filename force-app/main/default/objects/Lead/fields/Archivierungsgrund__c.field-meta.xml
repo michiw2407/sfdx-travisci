@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Archivierungsgrund__c</fullName>
+    <externalId>false</externalId>
+    <label>Archivierungsgrund</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anderer Sortimentsschwerpunkt</fullName>
+                <default>false</default>
+                <label>Anderer Sortimentsschwerpunkt</label>
+            </value>
+            <value>
+                <fullName>Kein Fokuskunde</fullName>
+                <default>false</default>
+                <label>Kein Fokuskunde</label>
+            </value>
+            <value>
+                <fullName>Preis zu hoch</fullName>
+                <default>false</default>
+                <label>Preis zu hoch</label>
+            </value>
+            <value>
+                <fullName>WKZ Forderung zu hoch</fullName>
+                <default>false</default>
+                <label>WKZ Forderung zu hoch</label>
+            </value>
+            <value>
+                <fullName>Sonstiger Grund</fullName>
+                <default>false</default>
+                <label>&lt;Sonstiger Grund&gt;</label>
+            </value>
+            <value>
+                <fullName>Vertraglich Gebunden</fullName>
+                <default>false</default>
+                <label>&lt;Vertraglich Gebunden&gt;</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Archiviert</controllingFieldValue>
+            <valueName>Anderer Sortimentsschwerpunkt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Archiviert</controllingFieldValue>
+            <valueName>Kein Fokuskunde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Archiviert</controllingFieldValue>
+            <valueName>Preis zu hoch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Archiviert</controllingFieldValue>
+            <valueName>WKZ Forderung zu hoch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Archiviert</controllingFieldValue>
+            <valueName>Sonstiger Grund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Archiviert</controllingFieldValue>
+            <valueName>Vertraglich Gebunden</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Thema_Website__c</fullName>
+    <externalId>false</externalId>
+    <label>Thema (Website)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Qualitätsmanagement</fullName>
+                <default>false</default>
+                <label>Qualitätsmanagement</label>
+            </value>
+            <value>
+                <fullName>Verkauf Österreich</fullName>
+                <default>false</default>
+                <label>Verkauf Österreich</label>
+            </value>
+            <value>
+                <fullName>Verkauf International</fullName>
+                <default>false</default>
+                <label>Verkauf International</label>
+            </value>
+            <value>
+                <fullName>Shop</fullName>
+                <default>false</default>
+                <label>Shop</label>
+            </value>
+            <value>
+                <fullName>Buchhaltung/Auftragsabwicklung</fullName>
+                <default>false</default>
+                <label>Buchhaltung/Auftragsabwicklung</label>
+            </value>
+            <value>
+                <fullName>Sponsoring</fullName>
+                <default>false</default>
+                <label>Sponsoring</label>
+            </value>
+            <value>
+                <fullName>Sonstige</fullName>
+                <default>false</default>
+                <label>Sonstige</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

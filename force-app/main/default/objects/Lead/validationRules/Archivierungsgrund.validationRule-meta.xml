@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Archivierungsgrund</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+AND(
+
+TEXT (Status) = &quot;Archiviert&quot;,
+
+ISBLANK (TEXT (Archivierungsgrund__c) )
+
+)</errorConditionFormula>
+    <errorDisplayField>Archivierungsgrund__c</errorDisplayField>
+    <errorMessage>Bitte wählen Sie einen Archivierungsgrund aus.</errorMessage>
+</ValidationRule>

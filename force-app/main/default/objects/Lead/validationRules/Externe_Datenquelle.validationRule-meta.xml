@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Externe_Datenquelle</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+AND(
+
+TEXT (LeadSource) = &quot;Externe Datenquelle&quot;,
+
+ISBLANK( ExterneDatenquelle__c)
+
+)</errorConditionFormula>
+    <errorDisplayField>ExterneDatenquelle__c</errorDisplayField>
+    <errorMessage>Bitte geben Sie Ihre externe Datenquelle an.</errorMessage>
+</ValidationRule>

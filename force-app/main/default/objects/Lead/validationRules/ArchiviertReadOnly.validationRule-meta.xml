@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ArchiviertReadOnly</fullName>
+    <active>true</active>
+    <description>Wenn ein Lead auf Status &quot;archiviert&quot; gesetzt wurde, dann ist eine Bearbeitung nicht möglich.</description>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+AND(
+ISPICKVAL( PRIORVALUE(Status ), &quot;Archiviert&quot;),
+NOT(ISNEW()),
+NOT(ISCHANGED(Status))
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Archivierte Leads können nicht bearbeitet werden. 
+Ändern Sie den Lead Status um ihn bearbeiten zu können.</errorMessage>
+</ValidationRule>

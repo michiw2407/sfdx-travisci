@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PLZPflichtfeldbeiStatusQualifizierung</fullName>
+    <active>true</active>
+    <description>Postleitzahl wird zu einem Pflichtfeld bei Status Qualifizierung.</description>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+AND(
+
+OR(
+TEXT (Status) = &quot;In Bearbeitung&quot;,
+TEXT (Status) = &quot;Konvertiert&quot;),
+
+ISBLANK (PostalCode)
+
+)</errorConditionFormula>
+    <errorDisplayField>PostalCode</errorDisplayField>
+    <errorMessage>Bitte geben Sie unter den Adressinformationen eine Postleitzahl an.</errorMessage>
+</ValidationRule>

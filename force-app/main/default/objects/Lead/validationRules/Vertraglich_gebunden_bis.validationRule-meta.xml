@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vertraglich_gebunden_bis</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Setup.ProcessSetting__c.IgnoreValidationRule__c &lt;&gt; 1 &amp;&amp;
+
+AND(
+
+TEXT (Archivierungsgrund__c) = &quot;Vertraglich gebunden&quot;,
+
+ISBLANK( Gebundenbis__c )
+
+)</errorConditionFormula>
+    <errorDisplayField>Gebundenbis__c</errorDisplayField>
+    <errorMessage>Bitte geben Sie ein Datum ein.</errorMessage>
+</ValidationRule>
